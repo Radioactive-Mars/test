@@ -1,0 +1,280 @@
+1mcnpx    version 2.6.0 ld=Wed Apr 09 08:00:00 MST 2008                04/23/16 04:32:37
+ ***************************************************************************************   probid =   04/23/16 04:32:37
+ i=n3.txt o=n3o.txt                                                                                                      
+
+ *************************************************************
+ *                                                           *
+ *                   MCNPX                                   *
+ *                                                           *
+ * Copyright 2007. Los Alamos National Security, LLC.        *
+ * All rights reserved.                                      *
+ *                                                           *
+ * This material was produced under U.S. Government contract *
+ * DE-AC52-06NA25396 for Los Alamos National Laboratory,     *
+ * which is operated by Los Alamos National Security, LLC    *
+ * for the U.S. Department of Energy. The Government is      *
+ * granted for itself and others acting on its behalf a      *
+ * paid-up, nonexclusive, irrevocable worldwide license in   *
+ * this material to reproduce, prepare derivative works, and *
+ * works, and perform publicly and display publicly.         *
+ * Beginning five (5) years after June 1, 2006, subject to   *
+ * additional five-year worldwide renewals, the Government   *
+ * is granted for itself and others acting on its behalf     *
+ * a paid-up, nonexclusive, irrevocable worldwide license    *
+ * in this material to reproduce, prepare derivative works,  *
+ * distribute copies to the public, perform publicly and     *
+ * display publicly, and to permit others to do so.          *
+ *                                                           *
+ * NEITHER THE UNITED STATES NOR THE UNITED STATES           *
+ * DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY,   *
+ * LLC, NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY,      *
+ * EXPRESS OR IMPLIED, OR ASSUMES ANY LEGAL LIABILITY OR     *
+ * RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS, OR         *
+ * USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, OR     *
+ * PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT   *
+ * INFRINGE PRIVATELY OWNED RIGHTS.                          *
+ *                                                           *
+ *************************************************************
+    1-       NASA Space Project, Lithium Interactions                                        
+    2-       1 10 -0.534 -100 imp:H=1                                                        
+    3-       2 0 100 -200 imp:H=1                                                            
+    4-       3 0 200 imp:H=0                                                                 
+    5-                                                                                       
+    6-       100 Box  -5000 -0.5 -5000 10000 0 0 0 1 0 0 0 10000                             
+    7-       200 Box -10000 -10000 -10000 20000 0 0 0 20000 0 0 0 20000                      
+    8-                                                                                       
+    9-       Mode H                                                                          
+   10-       SDEF Par=H Erg=3E1 cel=2 Axs=0 0 1 pos 0 0 0 Rad d1 Ext d2 $ source definition  
+   11-       SI1 0 5500                                                                      
+   12-       SI2 -6000 6000                                                                  
+   13-       C                                                                               
+   14-       m10 3007 -1                                                                     
+   15-       C                                                                               
+   16-       F4:H 1                                                                          
+   17-       FM4 2.78E14                                                                     
+   18-       C                                                                               
+   19-       nps 1000000                                                                     
+
+
+1LAHET physics options:                                                                                 print table 41
+
+ lca    ielas   ipreq  iexisa  ichoic   jcoul  nexite   npidk   noact    icem    ilaq
+ lca        2       1       1      23       1       1       0       1       0       0
+
+ lcb    flenb(i),i=1,6                                                          ctofe       flim0
+ lcb    3.4900E+03  3.4900E+03  2.4900E+03  2.4900E+03  8.0000E+02  8.0000E+02 -1.0000E+00 -1.0000E+00
+
+ lea     ipht     icc  nobalc  nobale   ifbrk  ilvden   ievap   nofis
+ lea        1       4       1       0       1       0       0       1
+
+ leb    yzere       bzere       yzero       bzero
+ leb    1.5000E+00  8.0000E+00  1.5000E+00  1.0000E+01
+
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     proton                                        
+        cell  mat    density     density     volume       mass     pieces  importance                                    
+
+     1     1   10  4.58348E-02 5.34000E-01 1.00000E+08 5.34000E+07      0  1.0000E+00                                    
+     2     2    0  0.00000E+00 0.00000E+00 7.99990E+12 0.00000E+00      0  1.0000E+00                                    
+     3     3    0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00      0  0.0000E+00                                    
+
+ total                                     8.00000E+12 5.34000E+07
+
+
+ random number control    0.830206021468160E+14
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file endf70prot                                                      
+
+   3007.70h   36745  acer                                                                         mat 328      09/17/07
+
+  total       36745
+
+1particles and energy limits                                                                            print table 101
+
+                         particle      maximum       smallest      largest       always        always
+                         cutoff        particle      table         table         use table     use model
+   particle type         energy        energy        maximum       maximum       below         above
+
+    9  h  proton        1.0000E+00    1.0000E+02    1.0000E+01    1.0000E+01    1.0000E+01    1.0000E+01
+ 
+
+
+
+
+
+ decimal words of dynamically allocated storage
+
+     general                  0
+     tallies               3256
+     bank                116737
+     cross sections       36746
+
+     total                    0     =           0 bytes
+
+ ***********************************************************************************************************************
+ dump no.    1 on file runtpf     nps =           0   coll =              0     ctm =    0.00     nrn =              0
+
+1problem summary                                                                                                       
+
+      run terminated when   1000000 particle histories were done.
++                                                                                                     04/23/16 04:32:57
+      NASA Space Project, Lithium Interactions                                             probid =   04/23/16 04:32:37
+
+ proton creation        tracks   weight        energy            proton loss            tracks   weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source             1000000    1.0000E+00    3.0000E+01          escape              930502    9.3048E-01    2.5560E+01
+ nucl. interaction     3566    3.5660E-03    2.8944E-02          energy cutoff        68532    6.8265E-02    6.8263E-02
+ particle decay           0    0.            0.                  time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ energy importance        0    0.            0.                  energy importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ tabular sampling         0    0.            0.                  multiple scatter         0    0.            4.2856E+00
+                                                                 bremsstrahlung           0    0.            0.        
+ photonuclear             0    0.            0.                  nucl. interaction     4532    4.5320E-03    1.0188E-01
+ elastic recoil           0    0.            0.                  elastic scatter          0    0.            1.0953E-02
+                                                                 particle decay           0    0.            0.        
+                                                                 capture                  0    2.8937E-04    1.8303E-03
+ (gamma,xgen_chg)         0    0.            0.                  tabular sampling         0    0.            0.        
+     total          1003566    1.0036E+00    3.0029E+01              total          1003566    1.0036E+00    3.0029E+01
+
+   number of particles banked                   3566                                              cutoffs
+   particle tracks per source particle    1.0036E+00                                                tco   1.0000E+34
+   particle substeps per source particle  9.0786E+00                                                eco   1.0000E+00
+   total particle  substeps                  9078599                                                wc1   0.0000E+00
+                                                                                                    wc2   0.0000E+00
+
+ computer time so far in this run     0.32 minutes            maximum number ever in bank         2
+ computer time in mcrun               0.32 minutes            bank overflows to backup file       0
+ source particles per minute            3.1144E+06            dynamic storage         0 words,          0 bytes.
+ random numbers generated                 50567068            most random numbers used was     1925 in history   618344
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+
+ source efficiency = 0.9999  in cell     2
+1proton      activity in each cell                                                                      print table 126
+
+                 tracks     population    substeps     substeps      number        flux        average      average
+        cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                    (per history)    energy       energy     (relative)      (cm)
+
+     1     1      230458       234024      7917639    7.9073E+00   2.0827E+01   2.2250E+01   9.9992E-01   9.5779E-02
+     2     2     1160960      1000402      1160960    1.1609E+00   2.6270E+01   2.7415E+01   9.9998E-01   0.0000E+00
+
+     total       1391418      1234426      9078599    9.0683E+00
+1tally   4        nps =  1000000
+           tally type 4    track length estimate of particle flux.                        
+           particle(s): proton     
+
+           this tally is all multiplied by  2.78000E+14
+
+           volumes 
+                   cell:       1                                                                                   
+                         1.00000E+08
+ 
+ cell  1                                                                                                               
+                 9.59026E+05 0.0019
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally   4 with nps =   1000000    print table 160
+
+
+ normed average tally per history  = 9.59026E+05          unnormed average tally per history  = 9.59026E+13
+ estimated tally relative error    = 0.0019               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0018               relative error from nonzero scores  = 0.0005
+
+ number of nonzero history tallies =      230458          efficiency for the nonzero tallies  = 0.2305
+ history number of largest  tally  =      360247          largest  unnormalized history tally = 5.66705E+14
+ (largest  tally)/(average tally)  = 5.90918E+00          (largest  tally)/(avg nonzero tally)= 1.36182E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 9.59027E+05
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            9.59026E+05             9.59030E+05                     0.000005
+      relative error                  1.89588E-03             1.89588E-03                    -0.000003
+      variance of the variance        2.61248E-06             2.61246E-06                    -0.000007
+      shifted center                  9.59027E+05             9.59027E+05                     0.000000
+      figure of merit                 8.66455E+05             8.66460E+05                     0.000005
+
+ the estimated slope of the 111 largest  tallies starting at  5.58732E+14 appears to be decreasing at least exponentially.
+ the empirical history score probability density function appears to be increasing at the largest  history scores: please examine.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally   4
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.00      yes          yes            0.00      yes         yes            constant    random      10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 9.5721E+05 to 9.6085E+05; 9.5539E+05 to 9.6266E+05; 9.5357E+05 to 9.6448E+05
+ estimated  symmetric confidence interval(1,2,3 sigma): 9.5721E+05 to 9.6084E+05; 9.5539E+05 to 9.6266E+05; 9.5357E+05 to 9.6448E+05
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (3.114E+06)*( 5.275E-01)**2 = (3.114E+06)*(2.782E-01) = 8.665E+05
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+     4   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+1tally fluctuation charts                         
+
+                       tally    4
+       nps      mean     error   vov  slope    fom
+     64000   9.6560E+05 0.0075 0.0000 10.0  849775
+    128000   9.6577E+05 0.0053 0.0000 10.0  857706
+    192000   9.6241E+05 0.0043 0.0000 10.0  862890
+    256000   9.6016E+05 0.0037 0.0000 10.0  861420
+    320000   9.6023E+05 0.0033 0.0000 10.0  862134
+    384000   9.6247E+05 0.0031 0.0000 10.0  863754
+    448000   9.6141E+05 0.0028 0.0000 10.0  865016
+    512000   9.6018E+05 0.0026 0.0000 10.0  865484
+    576000   9.6004E+05 0.0025 0.0000 10.0  865362
+    640000   9.6034E+05 0.0024 0.0000 10.0  866062
+    704000   9.6057E+05 0.0023 0.0000 10.0  866261
+    768000   9.6139E+05 0.0022 0.0000 10.0  866332
+    832000   9.6131E+05 0.0021 0.0000 10.0  866561
+    896000   9.5995E+05 0.0020 0.0000 10.0  866608
+    960000   9.5894E+05 0.0019 0.0000 10.0  866211
+   1000000   9.5903E+05 0.0019 0.0000 10.0  866455
+
+ ***********************************************************************************************************************
+ dump no.    2 on file runtpf     nps =     1000000   coll =        9078599     ctm =    0.32     nrn =       50567068
+
+
+
+ run terminated when   1000000 particle histories were done.
+
+ computer time =    0.32 minutes
+
+ mcnpx    version 2.6.0 Wed Apr 09 08:00:00 MST 2008                 04/23/16 04:32:57     probid =   04/23/16 04:32:37
